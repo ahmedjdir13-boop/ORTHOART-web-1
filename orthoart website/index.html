@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark" data-noise="on">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrthoArt — FREE YOUR SMILE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="v2-refit">
+
+  <div id="noise-overlay"></div>
+  <div id="treatment-preview" class="treatment-preview" aria-hidden="true">
+    <div class="treatment-preview-copy"><span>ORTHOART · LES SOINS</span><strong></strong><small>Une trajectoire pensée
+        pour vous · cliquez pour fermer</small></div>
+  </div>
+
+  <header>
+    <a href="#hero" class="logo">
+      <svg class="tooth-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M50 12 C32 12 20 24 20 39 C20 48 23 54 26 61 C29 68 31 82 38 82 C44 82 44 66 50 66 C56 66 56 82 62 82 C69 82 71 68 74 61 C77 54 80 48 80 39 C80 24 68 12 50 12 Z" />
+      </svg>
+      <span class="logo-text">Ortho<em>Art</em></span>
+    </a>
+    <nav>
+      <a href="#hero" class="active">Accueil</a>
+      <a href="#services">Soins</a>
+      <a href="#process">Parcours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="toggles">
+      <button id="account-toggle" class="icon-btn" aria-label="Avez-vous un compte" title="Espace patient">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8.2" r="3.9" />
+          <path d="M4.2 20c0-4.3 3.5-6.8 7.8-6.8s7.8 2.5 7.8 6.8" />
+        </svg>
+      </button>
+      <button id="noise-toggle" class="icon-btn" aria-label="Basculer le grain" title="Grain">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="7" cy="7" r="1.5" />
+          <circle cx="13.5" cy="5.5" r="1.1" />
+          <circle cx="17.5" cy="10.5" r="1.4" />
+          <circle cx="6" cy="14.5" r="1.1" />
+          <circle cx="11.5" cy="13" r="1.6" />
+          <circle cx="16.5" cy="16.5" r="1.1" />
+          <circle cx="9.5" cy="18.5" r="1.3" />
+        </svg>
+      </button>
+      <button id="theme-toggle" class="icon-btn" aria-label="Basculer le thème" title="Thème">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.2 14.7A8.6 8.6 0 1 1 9.3 3.8a7.1 7.1 0 0 0 10.9 10.9Z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section id="hero">
+      <div class="hero-text">
+        <p class="eyebrow reveal">Orthodontie invisible · sur mesure</p>
+        <h1 class="reveal">Un sourire,<br>sculpté avec<br><em>précision</em>.</h1>
+        <p class="sub reveal">OrthoArt offre plusieurs traitements variés pour un sourire radieux , pensés pour
+          s'intégrer à votre vie — pas l'inverse !</p>
+        <div class="cta-row reveal">
+
+        </div>
+        <button class="link-account" id="open-account" data-sfx="hover-tick">Avez-vous déjà un compte ? <span>Se
+            connecter →</span></button>
+      </div>
+      <div class="hero-visual" id="aligner-stage">
+        <svg class="tooth-watermark" id="aligner" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="toothClip">
+              <path
+                d="M50 12 C32 12 20 24 20 39 C20 48 23 54 26 61 C29 68 31 82 38 82 C44 82 44 66 50 66 C56 66 56 82 62 82 C69 82 71 68 74 61 C77 54 80 48 80 39 C80 24 68 12 50 12 Z" />
+            </clipPath>
+            <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+              <stop offset="50%" stop-color="#fff" stop-opacity="0.75" />
+              <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <path class="tooth-base"
+            d="M50 12 C32 12 20 24 20 39 C20 48 23 54 26 61 C29 68 31 82 38 82 C44 82 44 66 50 66 C56 66 56 82 62 82 C69 82 71 68 74 61 C77 54 80 48 80 39 C80 24 68 12 50 12 Z" />
+          <g clip-path="url(#toothClip)">
+            <rect x="-30" y="0" width="40" height="100" fill="url(#shineGrad)" transform="rotate(25 0 50)">
+              <animateTransform attributeName="transform" type="translate" from="-20 0" to="150 0" dur="4s"
+                repeatCount="indefinite" additive="sum" />
+            </rect>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services">
+      <p class="eyebrow reveal">Nos soins</p>
+      <h2 class="reveal"> les meilleurs traitements pour retrouver<br>confiance en votre sourire.</h2>
+      <div class="card-grid">
+        <div class="tilt-card reveal treatment-card" data-treatment="Gouttières invisibles">
+          <div class="card-preview-img" style="background-image:url('images/soin-gouttieres.svg')" aria-hidden="true">
+          </div>
+          <div class="card-num">01</div>
+          <h3>Gouttières invisibles</h3>
+          <p>Fabriquées sur mesure dans des laboratoires à agréés à partir d'une empreinte 3D de votre mâchoire,
+            esthetique et quasi invisibles au quotidien.</p>
+        </div>
+        <div class="tilt-card reveal treatment-card" data-treatment="Multi-attaches">
+          <div class="card-preview-img" style="background-image:url('images/soin-multi-attache.svg')"
+            aria-hidden="true"></div>
+          <div class="card-num">02</div>
+          <h3> multiattache </h3>
+          <p> efficace et optimisée pour les cas les plus complexes.</p>
+        </div>
+        <div class="tilt-card reveal treatment-card" data-treatment="Appareil enfant">
+          <div class="card-preview-img" style="background-image:url('images/soin-appareil-enfant.svg')"
+            aria-hidden="true"></div>
+          <div class="card-num">03</div>
+          <h3> Appareil enfants</h3>
+          <p> un soin optimisé pour nos jeunes sourires.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS / TIMELINE ============ -->
+    <section id="process">
+      <p class="eyebrow reveal">Le parcours</p>
+      <h2 class="reveal">De la consultation<br>au sourire final.</h2>
+      <div class="timeline">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Consultation</h4>
+            <p>Bilan complet et discussion de vos objectifs.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4> soin adapté</h4>
+            <p> optimisé pour vos besoins spécifiques.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4> check-up mensuel </h4>
+            <p>Contrôles réguliers pour s'assurer que le traitement progresse comme prévu et s'assurer de votre
+              bien-être
+              (et votre assiduité !).</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>Suivi post-traitement</h4>
+            <p> Assistance continue pour maintenir les résultats et garantir votre satisfaction à long terme .</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section id="stats">
+      <div class="stat reveal">
+        <div class="stat-val">1200+</div>
+        <div class="stat-lab">Sourires transformés</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-val">14</div>
+        <div class="stat-lab">Années d'expertise</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-val">98%</div>
+        <div class="stat-lab">Patients satisfaits</div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact">
+      <p class="eyebrow reveal">Contact</p>
+      <h2 class="reveal">Prêt à commencer ?</h2>
+      <p class="sub reveal">Réserve ta consultation initiale, sans engagement.</p>
+      <button class="link-account reveal" id="open-account-2" data-sfx="hover-tick">Avez-vous déjà un compte ? <span>Se
+          connecter →</span></button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 OrthoArt — Orthodontie sur mesure créée par ahmed jdir</p>
+  </footer>
+
+  <!-- ============ MODAL — ESPACE PATIENT (code à 6 chiffres) ============ -->
+  <div id="account-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="close-account" aria-label="Fermer">✕</button>
+      <svg class="tooth-icon modal-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M50 12 C32 12 20 24 20 39 C20 48 23 54 26 61 C29 68 31 82 38 82 C44 82 44 66 50 66 C56 66 56 82 62 82 C69 82 71 68 74 61 C77 54 80 48 80 39 C80 24 68 12 50 12 Z" />
+      </svg>
+      <h3>Espace patient</h3>
+      <p class="modal-sub">Entre le code à 6 chiffres envoyé à ton dossier.</p>
+      <div class="pin-row" id="pin-row">
+        <input type="tel" inputmode="numeric" maxlength="1" class="pin-box" data-i="0">
+        <input type="tel" inputmode="numeric" maxlength="1" class="pin-box" data-i="1">
+        <input type="tel" inputmode="numeric" maxlength="1" class="pin-box" data-i="2">
+        <input type="tel" inputmode="numeric" maxlength="1" class="pin-box" data-i="3">
+        <input type="tel" inputmode="numeric" maxlength="1" class="pin-box" data-i="4">
+        <input type="tel" inputmode="numeric" maxlength="1" class="pin-box" data-i="5">
+      </div>
+      <p class="pin-status" id="pin-status">&nbsp;</p>
+      <button class="btn-primary modal-submit" id="pin-submit" disabled data-sfx="confirm">Se connecter</button>
+    </div>
+  </div>
+
+  <!-- ============ PAGE PLEIN ÉCRAN — TABLEAU DE BORD PATIENT ============ -->
+  <div id="patient-view" class="full-view" aria-hidden="true">
+    <header class="view-header">
+      <button class="back-btn" data-close-view="patient-view" data-sfx="hover-tick">← Retour au site</button>
+      <div class="logo">
+        <svg class="tooth-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M50 12 C32 12 20 24 20 39 C20 48 23 54 26 61 C29 68 31 82 38 82 C44 82 44 66 50 66 C56 66 56 82 62 82 C69 82 71 68 74 61 C77 54 80 48 80 39 C80 24 68 12 50 12 Z" />
+        </svg>
+        <span class="logo-text">Ortho<em>Art</em></span>
+      </div>
+    </header>
+    <main class="view-content" id="patient-view-content"></main>
+  </div>
+
+  <!-- ============ PAGE PLEIN ÉCRAN — PANNEAU ADMIN ============ -->
+  <div id="admin-view" class="full-view" aria-hidden="true">
+    <header class="view-header">
+      <button class="back-btn" data-close-view="admin-view" data-sfx="hover-tick">← Retour au site</button>
+      <div class="logo">
+        <svg class="tooth-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M50 12 C32 12 20 24 20 39 C20 48 23 54 26 61 C29 68 31 82 38 82 C44 82 44 66 50 66 C56 66 56 82 62 82 C69 82 71 68 74 61 C77 54 80 48 80 39 C80 24 68 12 50 12 Z" />
+        </svg>
+        <span class="logo-text">Ortho<em>Art</em></span>
+      </div>
+    </header>
+    <main class="view-content">
+      <div class="admin-view-inner admin-dashboard-v2">
+        <p class="eyebrow">Espace praticien</p>
+        <h2>Le cabinet,<br><em>en un regard.</em></h2>
+        <p class="modal-sub">Ajoute un patient, suis et modifie sa progression.</p>
+
+        <div class="admin-add-row">
+          <input type="text" id="new-patient-name" placeholder="Nom du patient" class="admin-input">
+          <select id="new-patient-type" class="admin-input admin-select">
+            <option value="gouttiere">Gouttières</option>
+            <option value="multi_attache">Multi-attaches</option>
+          </select>
+          <input type="number" id="new-patient-steps" placeholder="Nb de gouttières" class="admin-input steps-input"
+            value="12" min="1">
+          <button class="btn-primary" id="add-patient-btn">Ajouter</button>
+        </div>
+        <p class="pin-status" id="add-patient-status">&nbsp;</p>
+
+        <input type="text" id="patient-search" placeholder="🔍 Rechercher un patient..."
+          class="admin-input search-input">
+
+        <div id="patient-list" class="patient-list"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/sfx.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
